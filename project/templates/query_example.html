@@ -1,0 +1,15 @@
+<html>
+<body>
+<form method="POST"> <!--указание метода POST-->
+Request: <input type="text" name="req"">
+Mode: <input type="text" name="mode">
+<input type="submit" value="Отправить">
+</form>
+
+<?php
+
+echo "<br/>req = ". $_POST['req'];
+echo "<br/>mode = ". $_POST['mode'];
+?>
+</body>
+</html>

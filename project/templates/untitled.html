@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <title>Поисковик</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="static/base.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <div class="row header-row" style="padding-top: 2%; margin-top: 2%;">
+	    <div class="col s1"></div>
+
+	    <div class="col s10 header-col">
+	        <h4 style="line-height: 4rem; color: #4ca497; font-family: 'Pony'";>MyLittleSearchSystem</h4>
+	    </div>
+
+	    <div class="col s1"></div>
+	</div>
+
+
+	<div class="row" style="padding-bottom: 2%;">
+		<div class="col s1"></div>
+		
+		<div class="col s10" style="padding-top: 2%;">
+			<h4 style="font-size: 1.8rem; margin-bottom: 4%;">{{ mode}}: результаты поиска по запросу "{{ req }}":</h4>
+			{% for num, result in results.items() %}
+				<p style="font-size: 1.2rem;">{{ num }}. <a href="{{ result }}">{{ result }}</a></p>
+			{% endfor %}
+		</div>
+		<div class="col s1"></div>
+	</div>
+
+
+</body>
+</html>
